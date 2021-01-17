@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-                "program": "wor${workspaceFolder} \\primeiro-curso-js-3.js"    
+                "program": "wor${workspaceFolder} \\exercicios.js"    
         }
     ]
 }
