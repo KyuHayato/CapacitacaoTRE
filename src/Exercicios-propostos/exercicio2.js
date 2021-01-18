@@ -12,19 +12,12 @@ function fib(numero){
        else return fib(numero - 1) + fib(numero - 2);  
        
 }
+let soma = 0;
 const numero = 10;
 for(let x = 1; x <= numero; x++){
-    console.log(fib(x));
-
-}
-// Segunda parte ainda em desenvolvimento e duvida 
-/* let soma = 0
-const numero = 9
-for(let x = 1;x<numero;x++){
-    if(fib(x) % 0){
-        soma = fib(x)+ soma
-        console.log(soma)
-
+    if(fib(x) % 2 == 0){
+        soma = soma + fib(x); 
     }
     
-}       */
+}
+console.log("A soma é:",soma);
