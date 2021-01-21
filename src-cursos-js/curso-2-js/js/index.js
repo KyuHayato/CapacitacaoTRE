@@ -20,13 +20,16 @@ for (let i = 0; i < pacientes.length; i++) {
     } else {
         if ((peso >= 200) || (peso < 1)) {
             tdPeso.textContent = "peso invalido";
+            paciente.classList.add("paciente-invalido");
         }
         if ((altura > 2.30) || (altura < 0.1)) {
             tdAltura.textContent = "altura invalida";
+            paciente.classList.add("paciente-invalido");
         }
         console.log("dados invalidos")
         alert("dados invalidos")
         tdImc.textContent = "dados invalidos";
+        
     }
 }
 
