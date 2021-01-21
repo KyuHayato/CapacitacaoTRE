@@ -14,8 +14,8 @@ for (let i = 0; i < pacientes.length; i++) {
     let tdImc = paciente.querySelector(".info-imc");
 
     if (peso <= 200 && peso > 1 && (altura < 2.30) && (altura > 0.1)) {
-        imc = peso / (altura * altura);
-        tdImc.textContent = imc.toFixed(2);
+        imc = calculaIMC(peso, altura);
+        tdImc.textContent = imc;
 
     } else {
         if ((peso >= 200) || (peso < 1)) {
@@ -29,12 +29,19 @@ for (let i = 0; i < pacientes.length; i++) {
         console.log("dados invalidos")
         alert("dados invalidos")
         tdImc.textContent = "dados invalidos";
-        
+
     }
+
 }
+titulo.addEventListener("click", function () {
+    console.log("função anonima");
+});
 
-
-
+function calculaIMC(peso, altura) {
+    var imc = 0;
+    imc = peso / (altura * altura);
+    return imc.toFixed(2);
+}
 
 
 
