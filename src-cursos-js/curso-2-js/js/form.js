@@ -5,19 +5,21 @@ botaoAdicionar.addEventListener("click", function (event) {
     var form = document.querySelector("#form-adiciona");
 
     var paciente = obtemPaienteDoFormulario(form);
+    var pacienteTr = montarTr(paciente);
+    var erros = validaPaciente(paciente);
     console.log(paciente);
 
-    if (!validaPaciente(paciente)) {
+/*     if (!validaPaciente(paciente)) {
         alert("Paciente invalido, impossivel inserir ele no registro");
         return;
     }
-    //AJEITAR A VALIDAÇÃO
-    var pacienteTr = montarTr(paciente);
-    var erros = validaPaciente(paciente);
+ */    //AJEITAR A VALIDAÇÃO
+  
+    
+    console.log(erros);
 
-    if (erros.length > 0){
-        var mensagemErro = document.querySelector("#mensagem-erro");
-        mensagemErro.textContent = erros;
+    if (erros.length > 0) {
+        exibeMensagemDeErro(erros);
         return;
     }
     var tabela = document.querySelector("#tabela-pacientes");
@@ -27,6 +29,9 @@ botaoAdicionar.addEventListener("click", function (event) {
     form.reset();
 
 });
+
+var mensagensErro = document.querySelector("#mensagens-erro");
+mensagensErro.innerHTML = "";
 
 
 function obtemPaienteDoFormulario(form) {
@@ -58,22 +63,47 @@ function montarTr(paciente) {
 
 function montaTd(dado, classe) {
     var td = document.createElement("td");
-    td.textContent = dado;
     td.classList.add(classe);
-
+    td.textContent = dado;
     return td;
 }
 
 function validaPaciente(paciente) {
     var erros = [];
-
+    
     if (!validaPeso(paciente.peso)) {
-        erros.push("Peso é inválido");
-    }
+        erros.push("Peso invalido!");
 
     if (!validaAltura(paciente.altura)) {
         erros.push("Altura é inválida");
     }
 
+    if (paciente.nome.length == 0){
+        erros.push("o nome não pode ser em branco");
+    }
+
+    if (paciente.gordura.length == 0){
+        erros.push("A gordura do meu paciente não pode ser em branco");
+    }
+    
+    if (paciente.altura.length == 0){
+        erros.push("A altura não pode ser em branco");
+    }
+
+    
     return erros;
+}
+
+
+}
+
+function exibeMensagemDeErro(erros){
+    var ul = document.querySelector("#mensagens-erro")
+    ul.innerHTML = "";
+    erros.forEach(function(erro) {
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
+       
 }
