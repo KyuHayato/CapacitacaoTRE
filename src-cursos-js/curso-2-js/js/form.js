@@ -4,7 +4,7 @@ botaoAdicionar.addEventListener("click", function (event) {
 
     var form = document.querySelector("#form-adiciona");
 
-    var paciente = obtemPaienteDoFormulario(form);
+    var paciente = obtemPacienteDoFormulario(form);
     var pacienteTr = montarTr(paciente);
     var erros = validaPaciente(paciente);
     console.log(paciente);
@@ -34,7 +34,7 @@ var mensagensErro = document.querySelector("#mensagens-erro");
 mensagensErro.innerHTML = "";
 
 
-function obtemPaienteDoFormulario(form) {
+function obtemPacienteDoFormulario(form) {
     var paciente = {
         nome: form.nome.value,
         peso: form.peso.value,
@@ -69,7 +69,7 @@ function montaTd(dado, classe) {
 }
 
 function validaPaciente(paciente) {
-    var erros = [];
+     var erros = [];
     
     if (!validaPeso(paciente.peso)) {
         erros.push("Peso invalido!");

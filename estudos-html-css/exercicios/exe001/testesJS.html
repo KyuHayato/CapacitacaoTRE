@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 20px Arial;
+            background-color: antiquewhite;
+        }
+        input{
+            width: 100px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de valores!</h1>
+    <input type="number" name="txt1" id="txt1"> +
+    <input type="number" name="txt2" id="txt2">
+    <button type="submit" onclick="somar()">Somar</button>
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar(txt1, txt2){
+            var txt1 = document.getElementById("txt1");
+            var txt2 = document.getElementById("txt2");
+            var res = document.querySelector("#res")
+            var num1 = Number(txt1.value);
+            var num2 = Number(txt2.value);
+            var soma = num1 + num2;
+            res.innerHTML ="A soma é " + soma;
+        }
+    </script>
+</body>
+</html>

@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/Custom-Icon-Design-Flatastic-9-Yin-Yang-True-false.ico" type="image/x-icon">
     <title>Meu primeiro exercicio</title>
+    <style>
+        div#area{
+            font: 20ptx Arial;
+            background-color: aqua;
+            color: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -171,6 +182,47 @@
     </p>
     <h2>Novo Exemplo</h2>
     <p>Esse é um novo exemplo para linkagem <a href="pag-linkagem.html">clique aqui</a></p>
+
+    <h2>Link para download</h2>
+<p>Maneira de linkar um download <br>
+    <ul>
+        <li>
+            <a href="ebook-download/Como_se_tornar_um_Desenvolvedor_Full-Stack.pdf" download="Como_se_tornar_um_Desenvolvedor_Full-Stack.pdf" type="application/pdf">Livro fullstack</a>
+
+        </li>
+        <li>
+            <a href="ebook-download/Como_se_tornar_um_Desenvolvedor_Full-Stack.rar" download="Como_se_tornar_um_Desenvolvedor_Full-Stack.rar" type="application/vnd.rar">Download .rar</a>
+        </li>
+    </ul>
+</p>
+    <script>
+       let corpo = document.getElementsByTagName('p')[0]
+       corpo.style.color = 'green';
+       
+    </script>
+    <h1>Eventos DOM</h1> 
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        let a = document.getElementById("area");
+        a.addEventListener("click", clicar);
+        a.addEventListener("mouseenter", entrar);
+        a.addEventListener("mouseout", sair);
+        
+        function clicar() {
+            a.innerText = "CLiCOU!";
+            a.style.background = "red";
+        }
+        function entrar(){
+            a.innerText = "Entrou!";
+            a.style.background = "aqua";
+        }
+        function sair(){
+            a.innerText = "SAIU!";
+            a.style.background = "green";
+        }
+    </script>
 </body>
 
 </html>
