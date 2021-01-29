@@ -18,9 +18,14 @@ botaoAdicionar.addEventListener("click", function (event) {
     
     console.log(erros);
 
-    if (erros.length > 0) {
-        exibeMensagemDeErro(erros);
-        return;
+    if (erros === undefined) {
+       console.log("não possui erros!");
+    } else {
+        if (erros.length > 0){
+            
+            exibeMensagemDeErro(erros);
+            return;
+        }
     }
     var tabela = document.querySelector("#tabela-pacientes");
 
@@ -90,7 +95,6 @@ function validaPaciente(paciente) {
         erros.push("A altura não pode ser em branco");
     }
 
-    
     return erros;
 }
 
@@ -98,7 +102,7 @@ function validaPaciente(paciente) {
 }
 
 function exibeMensagemDeErro(erros){
-    var ul = document.querySelector("#mensagens-erro")
+    var ul = document.querySelector("#mensagens-erro");
     ul.innerHTML = "";
     erros.forEach(function(erro) {
         var li = document.createElement("li");
