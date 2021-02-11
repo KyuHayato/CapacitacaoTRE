@@ -2,28 +2,26 @@
 <html lang="pt">
 
 <head>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Criação de tabelas</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+    </style>
 </head>
 
 <body>
-    <table id="tabela" style="border: 1px">
-        <tr>
-            <td>Linha1 Celula1</td>
-            <td>Linha1 Celula2</td>
-        </tr>
-        <tr>
-            <td>Linha2 Celula1</td>
-            <td>Linha2 Celula2</td>
-        </tr>
-        <tr>
-            <td>Linha3 Celula1</td>
-            <td>Linha3 Celula2</td>
-        </tr>
-    </table>
-    <form>
-        <input type="button" onclick="alterarConteudo()" value="Alterar conteudo">
-    </form>
-    <script src="main.js"></script>
-</body>
 
+    <table id="tabela" style="border:1px"></table>
+    <form onsubmit="enviarDados()">
+        <label for="linhas">Linhas:<input type="text" id="linhas"></label>
+        <label for="colunas">Colunas:<input type="text" id="colunas"></label>
+        <input type="submit" value="Enviar">
+
+    </form>
+    <form>
+        <input type="button" onclick="criarTabela()" value="Criar tabela">
+    </form>
+</body>
+<script src="main.js"></script>
 </html>
