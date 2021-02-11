@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="img/Custom-Icon-Design-Flatastic-9-Yin-Yang-True-false.ico" type="image/x-icon">
     <title>Meu primeiro exercicio</title>
     <style>
-        div#area{
+        div#area {
             font: 20ptx Arial;
             background-color: aqua;
             color: black;
@@ -184,23 +184,25 @@
     <p>Esse é um novo exemplo para linkagem <a href="pag-linkagem.html">clique aqui</a></p>
 
     <h2>Link para download</h2>
-<p>Maneira de linkar um download <br>
+    <p>Maneira de linkar um download <br>
     <ul>
         <li>
-            <a href="ebook-download/Como_se_tornar_um_Desenvolvedor_Full-Stack.pdf" download="Como_se_tornar_um_Desenvolvedor_Full-Stack.pdf" type="application/pdf">Livro fullstack</a>
+            <a href="ebook-download/Como_se_tornar_um_Desenvolvedor_Full-Stack.pdf"
+                download="Como_se_tornar_um_Desenvolvedor_Full-Stack.pdf" type="application/pdf">Livro fullstack</a>
 
         </li>
         <li>
-            <a href="ebook-download/Como_se_tornar_um_Desenvolvedor_Full-Stack.rar" download="Como_se_tornar_um_Desenvolvedor_Full-Stack.rar" type="application/vnd.rar">Download .rar</a>
+            <a href="ebook-download/Como_se_tornar_um_Desenvolvedor_Full-Stack.rar"
+                download="Como_se_tornar_um_Desenvolvedor_Full-Stack.rar" type="application/vnd.rar">Download .rar</a>
         </li>
     </ul>
-</p>
+    </p>
     <script>
-       let corpo = document.getElementsByTagName('p')[0]
-       corpo.style.color = 'green';
-       
+        let corpo = document.getElementsByTagName('p')[0]
+        corpo.style.color = 'green';
+
     </script>
-    <h1>Eventos DOM</h1> 
+    <h1>Eventos DOM</h1>
     <div id="area">
         Interaja...
     </div>
@@ -209,35 +211,44 @@
         a.addEventListener("click", clicar);
         a.addEventListener("mouseenter", entrar);
         a.addEventListener("mouseout", sair);
-        
+
         function clicar() {
             a.innerText = "CLiCOU!";
             a.style.background = "red";
         }
-        function entrar(){
+        function entrar() {
             a.innerText = "Entrou!";
             a.style.background = "aqua";
         }
-        function sair(){
+        function sair() {
             a.innerText = "SAIU!";
             a.style.background = "green";
         }
     </script>
-    <h1>Midias em HTML5</h1>
-    <h2>Imagem dinamica</h2>
+        <h1>Midias em HTML5</h1>
+        <h2>Imagem dinamica</h2>
+
     <picture>
         <source media="(max-width: 750px)" srcset="img/foto-p.png" type="image/png">
         <source media="(max-width: 1050px)" srcset="img/foto-m.png" type="image/png">
         <img src="img/foto-g.png" alt="imagem flexivel">
     </picture>
+
     <h1>Audio em HTML5</h1>
     <audio preload="auto" autoplay controls>
         <source src="midias/lil peep - lose my mind [extended wlyrics].mp3" type="audio/mpeg">
     </audio>
+
     <h1>Videos em HTML5</h1>
-    <video width="500px" poster="img/logo-css.png" controls>
+    <video width="560px" poster="img/logo-css.png" controls>
         <source src="midias/video.mp4" type="video/mp4">
     </video>
+
+    <h1>Inserindo videos do YouTube</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T8D2AjShYXU" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
 </body>
 
 </html>
