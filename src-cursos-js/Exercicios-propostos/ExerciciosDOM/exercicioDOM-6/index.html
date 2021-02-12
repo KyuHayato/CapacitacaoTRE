@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt">
 
+
 <head>
     <title>Criação de tabelas</title>
     <style>
         body {
             margin: 30px;
         }
+        .celula, th, td {
+            
+             border: 3px solid black;
+    }
     </style>
 </head>
 
@@ -20,8 +25,15 @@
 
     </form>
     <form>
+        <div>
+            <table class="celula">
+                <th>Linhas</th>
+                <th>Colunas</th>
+            </table>
+        </div>
         <input type="button" onclick="criarTabela()" value="Criar tabela">
     </form>
 </body>
 <script src="main.js"></script>
+
 </html>
