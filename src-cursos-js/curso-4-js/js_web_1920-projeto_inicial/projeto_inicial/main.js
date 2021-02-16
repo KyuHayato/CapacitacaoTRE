@@ -1,7 +1,8 @@
-import {handleNovoItem} from './componentes/criaTarefa.js'
-import {carregaTarefa} from './componentes/carregaTarefa.js'
-const novaTarefa = document.querySelector('[data-form-button]')
+import { handleNovoItem } from './componentes/criaTarefa.js';
+import { carregaTarefa } from './componentes/carregaTarefa.js';
 
-novaTarefa.addEventListener('click', handleNovoItem)
+const novaTarefa = document.querySelector('[data-form-button]');
 
-carregaTarefa()
+novaTarefa.addEventListener('click', handleNovoItem);
+
+carregaTarefa();
