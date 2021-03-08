@@ -160,7 +160,8 @@ td, th {
     margin: 0 0 1em;
     clear: left;
 }
-.titulo-principal:first-letter{
+
+.titulo-principal:first-letter {
     font-weight: bold;
 }
 
@@ -185,6 +186,12 @@ td, th {
 
 .imagem-beneficios {
     width: 60%;
+    opacity: 1;
+}
+
+.imagem-beneficios:hover {
+    transition: 400ms;
+    opacity: 0.7;
 }
 
 .utensilios {
@@ -195,14 +202,14 @@ td, th {
 
 .mapa {
     padding: 3em 0;
-    background:linear-gradient(#fefefe, #888888);
-    
+    background: linear-gradient(#fefefe, #888888);
 }
 
-.mapa-conteudo{
+.mapa-conteudo {
     width: 940px;
     margin: 0 auto;
 }
+
 .mapa p {
     margin: 0 0 2em;
     text-align: center;
@@ -223,11 +230,12 @@ td, th {
     display: inline-block;
     vertical-align: top;
 }
-.itens:before{
+
+.itens:before {
     content: "🟊";
 }
 
-.itens{
+.itens {
     line-height: 1.5em;
 }
 
