@@ -20,7 +20,7 @@ class ProxyFactory {
             },
              set(target, prop, value, receiver) {
                 if(prop.includes(prop)){
-                    target(prop) = value
+                    target[prop] = value
                     acao(target)
 
                 }
