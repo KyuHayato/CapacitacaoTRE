@@ -23,7 +23,33 @@ class NegociacaoController {
 
    }
    importaNegociacoes() {
+      let service = new NegociacaoService();
+      service.obterNegociacaoDaSemana((erro, negociacoes) => {
+         if (erro) {
+            this._mensagem.texto = erro
+            return
+         }
+         negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao))
+         service.obterNegociacaoDaSemanaAnterior((erro, negociacoes) => {
+            if (erro) {
+               this._mensagem.texto = erro
+               return
+            }
+            negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao))
 
+            service.obterNegociacaoDaSemanaRetrasada((erro, negociacoes) => {
+               if (erro) {
+                  this._mensagem.texto = erro
+                  return
+               }
+               negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao))
+
+
+            })
+
+         })
+
+      })
    }
    _criaNegociacao() {
 
