@@ -1,28 +1,8 @@
+body {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.6em;
+}
 
-.cabecalho{
-    background:#0089c0;
-    
-}
-.renderizacao{
-    width: 200px;
-    float: center;
-    position: relative;
-}
-.container{
-    color: white;
-    width: 940px;
-    margin: auto;
-    background:#0089c0;
-    border: 2px solid #005baa;
-
-}
-.logo-vacina{
-    width: 250px;
-}
-.label-style{
-    width: 15%;
-    height:5%; 
-    
-    padding: 15px;
-    background: green;
+.bg-primary {
+    background: #0089c0;
 }

@@ -1,0 +1,49 @@
+.cabecalho {
+    background: #0089c0;
+}
+
+.renderizacao {
+    display: block;
+    width: 200px;
+    float: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.container {
+    color: white;
+    width: 940px;
+    margin: auto;
+    background: #0089c0;
+    border: 2px solid #005baa;
+}
+
+.logo-vacina {
+    width: 250px;
+}
+
+.label-style {
+    width: 15%;
+    height: 5%;
+    padding: 15px;
+    background: green;
+}
+
+footer {
+    background: #0089c0;
+}
+
+.imagem-rodape {
+    width: 250px;
+    display: block;
+  
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.paragrafo-rodape {
+    text-align: center;
+}
