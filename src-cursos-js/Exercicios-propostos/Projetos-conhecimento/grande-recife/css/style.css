@@ -6,3 +6,26 @@ body {
 .bg-primary {
     background: #0089c0;
 }
+.margem-footer{
+    margin-top: 15rem !important;
+}
+.font-size-footer{
+    font-size: 18px !important;
+}
+hr{
+    text-align: left;
+}
+.linha-estilizada-1{
+    border: 6px solid #4fb848; 
+}
+.label-estilo{
+    padding: 20px;
+    background:#4fb848;    
+}
+.margem-central{
+    margin-left: 10rem !important;
+}
+.teste{
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
