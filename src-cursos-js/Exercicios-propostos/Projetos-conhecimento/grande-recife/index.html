@@ -25,16 +25,16 @@
     </header>
 
     <main>
-        <section class="">
+        <figure>
             <img class="img-fluid mx-auto d-block mt-5 mb-5" src="img/logo-vacina.png" alt="logo-vacina">
-        </section>
-        <section class="">
+        </figure>
+        <section class="text-white">
             <div class="container border border-primary bg-primary p-5">
-                <article class="text-white">
-                    <h1><strong>PÚBLICO E VACINAÇÃO</strong></h1>
-                    <hr class="linha-estilizada-1">
-                    <h2 class="font-weight-bolder">Grupo atual</h2>
-                    <p>Idosos a partir de 64 anos de idade</p>
+                <article>
+
+                    <h1 class="linha-estilo"><strong>PÚBLICO E VACINAÇÃO</strong></h1>
+                    <h2 class="font-weight-bolder mb-3 mt-3">Grupo atual</h2>
+                    <p class="linha-estilo-vertical pl-4 mb-3">Idosos a partir de 64 anos de idade</p>
                     <p>
                         <strong>Imunização: </strong>cadastro e agendamento da vacinação estão disponíveis neste portal
                         ou no
@@ -48,8 +48,8 @@
                         quem não tem
                         acesso à internet. O usuário deverá levar comprovante de residência e documento com foto.
                     </p>
-                    <h2 class="label-estilo"><strong>Trabalhadores da Saúde</strong></h2>
-                    <p>
+                    <h2 class="label-estilo-1 p-2"><strong>Trabalhadores da Saúde</strong></h2>
+
                     <h3><strong>Etapa 01: </strong></h3>
                     <p>Profissionais da saúde da linha de frente Covid-19.</p>
 
@@ -80,29 +80,30 @@
                         exemplo, academias de ginástica, clubes, salão de beleza, clínica de estética, óticas, estúdios
                         de tatuagem e estabelecimentos de saúde animal.
                     </p>
-                    <p>
+                    <p class="mb-4">
                         No caso dos trabalhadores da saúde será exigida a comprovação de vínculo profissional. Basta
                         apresentar a carteira funcional (para profissões que possuem conselho) ou documento oficial com
                         foto (para o caso das áreas não regulamentadas por conselho) e a declaração da instituição onde
                         atuam.
                     </p>
 
-                    <h2 class="label-estilo"><strong>Grupos já vacinados</strong></h2>
-                    <p>
+                    <h2 class="label-estilo-2 p-2 mb-4"><strong>Grupos já vacinados</strong></h2>
+                    <p class="linha-estilo-vertical pl-3">
                         Pessoas idosas a partir de 60 anos em instituições de longa permanência e trabalhadores desses
                         lugares.
                     </p>
-                    <p>
+                    <p class="linha-estilo-vertical pl-3 mb-4">
                         Pessoas com deficiência, a partir dos 18 anos, vivendo em residências inclusivas.
                     </p>
                     <p class="mb-3">
                         Você que não faz parte desse grupo pode se cadastrar e receber o aviso direto quando chegar sua
                         vez de agendar:
                     </p>
-                    <div class="justify-content-center">
+                    <div  id="grupo-botoes" class="justify-content-center">
                         <div class="col-mx">
-                            <button type="button" class="btn btn-success btn-lg mr-4 margem-central teste">CADASTRAR</button>
-                            <button type="button" class="btn btn-light btn-lg teste">ENTRAR/AGENDAR</button>
+                            <a href="cadastro.html"><button type="button" id="botao-cadastrar"
+                                class="btn btn-success btn-lg mr-4 margem-central espaco-botao">CADASTRAR</button></a>
+                               <button id="botao-entrar" type="button" class="btn btn-light btn-lg espaco-botao">ENTRAR/AGENDAR</button>
                         </div>
                     </div>
                     <p class="mt-3">
@@ -114,6 +115,7 @@
             </div>
         </section>
     </main>
+
     <footer class="bg-primary margem-footer p-5">
         <section>
             <figure>

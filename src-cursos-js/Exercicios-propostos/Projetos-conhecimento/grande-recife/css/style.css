@@ -2,30 +2,77 @@ body {
     font-family: "Titillium Web", sans-serif;
     font-size: 1.6em;
 }
+.body-form{
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1em;   
+}
+.body-documentos{
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1em; 
+}
 
 .bg-primary {
     background: #0089c0;
 }
-.margem-footer{
+
+.margem-footer {
     margin-top: 15rem !important;
 }
-.font-size-footer{
+
+.font-size-footer {
     font-size: 18px !important;
 }
-hr{
-    text-align: left;
+
+.label-estilo-1 {
+    width: 38%;
+    background: #4fb848;
 }
-.linha-estilizada-1{
-    border: 6px solid #4fb848; 
+
+.label-estilo-2 {
+    width: 21rem;
+    background: #4fb848;
 }
-.label-estilo{
-    padding: 20px;
-    background:#4fb848;    
-}
-.margem-central{
+
+.margem-central {
     margin-left: 10rem !important;
 }
-.teste{
+
+.espaco-botao {
     padding-left: 100px !important;
     padding-right: 100px !important;
+}
+
+#botao-cadastrar:hover {
+    background: rgb(59, 58, 58);
+}
+
+#botao-entrar:hover {
+    background: rgb(59, 58, 58);
+    border: none;
+}
+
+.linha-estilo {
+    border-bottom: 10px solid #4fb848;
+    width: 45%;
+}
+.linha-estilo-1 {
+    border-bottom: 10px solid #4fb848;
+    width: 68%;
+}
+.linha-estilo-3 {
+    border-bottom: 10px solid #4fb848;
+    width: 26%;
+}
+
+.linha-estilo-vertical {
+    border-left: 10px solid #4fb848;
+    height: 5%;
+}
+li{
+    list-style-type:none;
+    
+}
+
+input[type="radio"] {
+    transform: scale(1.7);
 }
