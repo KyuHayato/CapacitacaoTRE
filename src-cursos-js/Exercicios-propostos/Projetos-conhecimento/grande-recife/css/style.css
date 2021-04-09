@@ -6,13 +6,13 @@ body {
     font-family: "Titillium Web", sans-serif;
     font-size: 1em;   
 }
-.body-documentos{
+#teste{
     font-family: "Titillium Web", sans-serif;
-    font-size: 1em; 
+    font-size: 12px; 
 }
 
 .bg-primary {
-    background: #0089c0;
+    background: #0089c0 !important;
 }
 
 .margem-footer {
@@ -63,6 +63,11 @@ body {
     border-bottom: 10px solid #4fb848;
     width: 26%;
 }
+.linha-estilo-4{
+    border-bottom: 10px solid #0089c0;
+    margin: calc(1rem / 2) 0px;
+    width: 39%;
+}
 
 .linha-estilo-vertical {
     border-left: 10px solid #4fb848;
@@ -76,3 +81,25 @@ li{
 input[type="radio"] {
     transform: scale(1.7);
 }
+
+.border-dark{
+    border: 2px solid black !important;
+}
+.card{
+    border: none !important;
+}
+
+.form-control{
+    background: transparent !important;
+     
+}
+.border-bottom{
+  border-bottom: 3px solid white !important;  
+}
+.padding-botao{
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+}
+
+
+
