@@ -283,71 +283,169 @@
         </section>
 
         <section>
-            <div class="container border border-success bg-success text-light">
-                <h1 class="font-weight-bolder linha-estilo-4 mt-5 mb-5">DADOS DE REGISTRO</h1>
+            <div class="container border border-success bg-success text-light p-5">
+                <h1 class="font-weight-bolder linha-estilo-4 mt-3 mb-5">DADOS DE REGISTRO</h1>
                 <div class="mb-4">
+
                     <label for="input-nome" class="form-label">NOME*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="input-nome">
-                    
-                    <label for="1" class="form-label">CPF*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="1">
-                    
-                    <label for="2" class="form-label">CARTÃO DO SUS*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
+                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
+                        id="input-nome" placeholder=" ">
+
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <label for="1" class="form-label">CPF</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="1">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="2" class="form-label">CARTÃO DO SUS</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                        </div>
+                    </div>
+
                     <label for="2" class="form-label">NOME COMPLETO DA MÃE*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">TEM ALGUMA NECESSIDADE ESPECIAL QUE IMPOSSIBILITA AO CENTRO DE REFERÊNCIA DE VACINAÇÃO*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">TELEFONE*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">DATA DE NASCIMENTO*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">RAÇA/COR**</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">SEXO*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">CEP**</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">RUA*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">NÚMERO*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">COMPLEMENTO*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">BAIRRO*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
+                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom mb-3"
+                        id="2">
+
+                    <label for="inputGroupSelect01" class="form-label">TEM ALGUMA NECESSIDADE ESPECIAL QUE
+                        IMPOSSIBILITA AO CENTRO DE
+                        REFERÊNCIA DE VACINAÇÃO*</label>
+                    <div class="input-group mb-3">
+                        <select
+                            class=" form-control custom-select text-light border-top-0 border-right-0 border-left-0 border-bottom"
+                            id="inputGroupSelect01">
+                            <option selected class="text-dark">Não</option>
+                            <option value="1" class="text-dark">Acamado</option>
+                            <option value="2" class="text-dark">Hospitalização com mais de 30 dias sem previsão de alta
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="2" class="form-label">TELEFONE*</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                        </div>
+                        <div class="col">
+                            <label for="2" class="form-label">DATA DE NASCIMENTO*</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputGroupSelect01" class="form-label">RAÇA/COR*</label>
+                            <div class="input-group mb-3">
+                                <select
+                                    class=" form-control custom-select text-light border-top-0 border-right-0 border-left-0 border-bottom"
+                                    id="inputGroupSelect01">
+                                    <option selected class="text-dark"></option>
+                                    <option value="1" class="text-dark">Amarela</option>
+                                    <option value="2" class="text-dark">Branca</option>
+                                    <option value="3" class="text-dark">Preta</option>
+                                    <option value="4" class="text-dark">Parda</option>
+                                    <option value="5" class="text-dark">Indigena</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="2" class="form-label">SEXO*</label>
+                            <div class="input-group mb-3">
+                                <select
+                                    class=" form-control custom-select text-light border-top-0 border-right-0 border-left-0 border-bottom"
+                                    id="inputGroupSelect01">
+                                    <option selected class="text-dark"></option>
+                                    <option value="1" class="text-dark">Masculino</option>
+                                    <option value="2" class="text-dark">Feminino</option>
+                                    <option value="3" class="text-dark">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="2" class="form-label">CEP*</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                        </div>
+                        <div class="col">
+                            <label for="2" class="form-label">RUA*</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3 mb-3">
+                        <div class="col">
+                            <label for="2" class="form-label">NÚMERO*</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                        </div>
+                        <div class="col">
+                            <label for="2" class="form-label">COMPLEMENTO*</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                        </div>
+                        <div class="col">
+                            <label for="2" class="form-label">BAIRRO*</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                        </div>
+                    </div>
+
                     <label for="2" class="form-label">CIDADE*</label>
-                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    <!-- COM UM CHECKBOX A ADICIONAR -->
-                    <label for="2" class="form-label">EMAIL*</label>
-                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">CONFIRMAÇÃO DO EMAIL*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">SENHA*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
-                    
-                    <label for="2" class="form-label">CONFIRMAÇÃO DA SENHA*</label>
-                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom mb-5" id="2">
+                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
+                        id="2">
+
+                    <div class="form-check mt-5 mb-5">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label ml-3" for="defaultCheck1">
+                            DEPENDENTE (CLIQUE SE NÃO TIVER E-MAIL PRÓPRIO)
+                        </label>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="email" class="form-label">EMAIL</label>
+                            <input type="email"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="email">
+                        </div>
+                        <div class="col">
+                            <label for="conf-email" class="form-label">CONFIRMAÇÃO DO EMAIL</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="conf-email">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="senha" class="form-label">SENHA*</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="senha">
+                        </div>
+                        <div class="col">
+                            <label for="conf-senha" class="form-label">CONFIRMAÇÃO DA SENHA*</label>
+                            <input type="text"
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom mb-5"
+                                id="conf-senha">
+                        </div>
+                    </div>
+
                     <!-- ESTILIZAR A CLASSE DO BOTAO -->
-                    <button type="button" class="btn btn-light pl-5 caracteristicas-botao">SALVAR</button>
-
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <button type="button"
+                                class="btn btn-light botao-salvar caracteristicas-botao">SALVAR</button>
+                        </div>
+                    </div>
                 </div>
-
             </div>
+
         </section>
     </main>
 

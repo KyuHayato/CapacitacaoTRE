@@ -66,8 +66,14 @@ body {
 .linha-estilo-4{
     border-bottom: 10px solid #0089c0;
     margin: calc(1rem / 2) 0px;
-    width: 39%;
+    width: 42%;
 }
+.linha-estilo-5{
+    border-bottom: 10px solid #4fb848;
+    margin: calc(1rem / 2) 0px;
+    width: 16%;
+}
+
 
 .linha-estilo-vertical {
     border-left: 10px solid #4fb848;
@@ -80,6 +86,10 @@ li{
 
 input[type="radio"] {
     transform: scale(1.7);
+}
+input[type="checkbox"] {
+    transform: scale(1.7);
+    
 }
 
 .border-dark{
@@ -94,12 +104,22 @@ input[type="radio"] {
      
 }
 .border-bottom{
-  border-bottom: 3px solid white !important;  
+  border-bottom: 3px solid white !important;
+  
 }
-.padding-botao{
-    padding-left: 60px !important;
-    padding-right: 60px !important;
+.botao-salvar{
+    padding-left: 150px !important;
+    padding-right: 150px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    color: #0089c0 !important;
 }
-
+.botao-salvar:hover{
+    background: rgb(59, 58, 58);
+    color: white !important;
+}
+.border-bottom-login{
+    border-bottom: 3px solid black !important;
+}
 
 
