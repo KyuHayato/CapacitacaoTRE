@@ -71,7 +71,7 @@ body {
 .linha-estilo-5{
     border-bottom: 10px solid #4fb848;
     margin: calc(1rem / 2) 0px;
-    width: 16%;
+    width: 19%;
 }
 
 
@@ -114,12 +114,36 @@ input[type="checkbox"] {
     padding-bottom: 10px !important;
     color: #0089c0 !important;
 }
+.botao-entrar{
+    padding-left: 150px !important;
+    padding-right: 126px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    color: white !important;
+}
+
+.botao-entrar:hover{
+    background: rgb(59, 58, 58);
+    color: white !important;
+}
+
 .botao-salvar:hover{
     background: rgb(59, 58, 58);
     color: white !important;
 }
 .border-bottom-login{
     border-bottom: 3px solid black !important;
+}
+.btn-link{
+    color: rgb(134, 131, 131) !important;
+
+}
+.tamanho-fonte-link{
+    
+    font-size: 15px !important;
+}
+.tamanho-fonte-login{
+    font-size: 14px !important;
 }
 
 
