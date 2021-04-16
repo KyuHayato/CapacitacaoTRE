@@ -2,13 +2,15 @@ body {
     font-family: "Titillium Web", sans-serif;
     font-size: 1.6em;
 }
-.body-form{
+
+.body-form {
     font-family: "Titillium Web", sans-serif;
-    font-size: 1em;   
+    font-size: 1em;
 }
-#teste{
+
+#teste {
     font-family: "Titillium Web", sans-serif;
-    font-size: 12px; 
+    font-size: 12px;
 }
 
 .bg-primary {
@@ -21,6 +23,11 @@ body {
 
 .font-size-footer {
     font-size: 18px !important;
+}
+
+.label-estilo-0 {
+    width: 12.5rem;
+    background: #4fb848;
 }
 
 .label-estilo-1 {
@@ -55,66 +62,71 @@ body {
     border-bottom: 10px solid #4fb848;
     width: 45%;
 }
+
 .linha-estilo-1 {
     border-bottom: 10px solid #4fb848;
     width: 68%;
 }
+
 .linha-estilo-3 {
     border-bottom: 10px solid #4fb848;
     width: 26%;
 }
-.linha-estilo-4{
+
+.linha-estilo-4 {
     border-bottom: 10px solid #0089c0;
     margin: calc(1rem / 2) 0px;
     width: 42%;
 }
-.linha-estilo-5{
+
+.linha-estilo-5 {
     border-bottom: 10px solid #4fb848;
     margin: calc(1rem / 2) 0px;
     width: 19%;
 }
 
-
 .linha-estilo-vertical {
     border-left: 10px solid #4fb848;
     height: 5%;
 }
-li{
-    list-style-type:none;
-    
+
+li {
+    list-style-type: none;
 }
 
 input[type="radio"] {
     transform: scale(1.7);
 }
+
 input[type="checkbox"] {
     transform: scale(1.7);
-    
 }
 
-.border-dark{
+.border-dark {
     border: 2px solid black !important;
 }
-.card{
+
+.card {
     border: none !important;
 }
 
-.form-control{
+.form-control {
     background: transparent !important;
-     
 }
-.border-bottom{
-  border-bottom: 3px solid white !important;
-  
+
+.border-bottom {
+    border-bottom: 3px solid white !important;
 }
-.botao-salvar{
+
+.botao-salvar {
     padding-left: 150px !important;
     padding-right: 150px !important;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
     color: #0089c0 !important;
 }
-.botao-entrar{
+
+.botao-entrar {
     padding-left: 150px !important;
     padding-right: 126px !important;
     padding-top: 10px !important;
@@ -122,28 +134,39 @@ input[type="checkbox"] {
     color: white !important;
 }
 
-.botao-entrar:hover{
+.botao-entrar:hover {
     background: rgb(59, 58, 58);
     color: white !important;
 }
 
-.botao-salvar:hover{
+.botao-salvar:hover {
     background: rgb(59, 58, 58);
     color: white !important;
 }
-.border-bottom-login{
+
+.border-bottom-login {
     border-bottom: 3px solid black !important;
 }
-.btn-link{
-    color: rgb(134, 131, 131) !important;
 
+.btn-link {
+    color: rgb(134, 131, 131) !important;
 }
-.tamanho-fonte-link{
-    
+
+.tamanho-fonte-link {
     font-size: 15px !important;
 }
-.tamanho-fonte-login{
+
+.tamanho-fonte-login {
     font-size: 14px !important;
 }
 
-
+.btn-outline-info {
+    background: white !important;
+    border-radius: 50% !important;
+    
+}
+/* teste passado */
+.modal-wi-teste{
+    width: 80% !important;
+    margin: auto !important;
+}

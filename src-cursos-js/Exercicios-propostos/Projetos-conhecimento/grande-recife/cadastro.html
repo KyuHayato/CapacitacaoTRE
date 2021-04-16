@@ -49,7 +49,30 @@
                                     value="option1">
                                 <label class="form-check-label mb-2" for="inlineRadio1">Trabalhadores de saúde da
                                     linha de frente
-                                    Covid-19 (Grupo 1)</label>
+                                    Covid-19 (Grupo 1)</label><button type="button" class="btn btn-outline-info ml-2"
+                                    data-toggle="modal" data-target="#modalExemplo">❔</button>
+
+                                <div class="modal fade text-dark" id="modalExemplo" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+
+
+                                            </div>
+                                            <div class="modal-body border-dark modal-wi-teste">
+                                                <p class="linha-estilo-1">ATENÇÂO</p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus accusantium ut ad sequi in voluptatum corrupti nulla maxime aspernatur veniam amet, architecto debitis, unde, dignissimos nemo qui neque officia!
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
 
@@ -255,11 +278,11 @@
         </section>
 
         <section class="body-documentos">
-            <div class="container border border-dark mb-4">
+            <div class="container border border-dark mb-4" data-documentos>
                 <h1 class="font-weight-bolder linha-estilo-3 mt-4 mb-3">DOCUMENTOS</h1>
 
                 <!-- Codigo da aba de documentos, usar no JS como template event -->
-                <div class="row justify-content-around">
+                <!-- <div class="row justify-content-around">
                     <div class="col-6">
                         <div class="card mb-4">
                             <div class="card-body text-center">
@@ -276,7 +299,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
             </div>
@@ -418,7 +441,8 @@
                         <div class="col">
                             <label for="conf-email" class="form-label">CONFIRMAÇÃO DO EMAIL</label>
                             <input type="text"
-                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="conf-email">
+                                class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
+                                id="conf-email">
                         </div>
                     </div>
 
@@ -439,8 +463,7 @@
                     <!-- ESTILIZAR A CLASSE DO BOTAO -->
                     <div class="row justify-content-center">
                         <div class="col-4">
-                            <button type="button"
-                                class="btn btn-light botao-salvar">SALVAR</button>
+                            <button type="button" class="btn btn-light botao-salvar">SALVAR</button>
                         </div>
                     </div>
                 </div>
@@ -460,15 +483,15 @@
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/documentos.js"></script>
 </body>
 
 </html>
