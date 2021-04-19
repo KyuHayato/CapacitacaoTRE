@@ -60,28 +60,33 @@ body {
 
 .linha-estilo {
     border-bottom: 10px solid #4fb848;
+    position: relative;
     width: 45%;
 }
 
 .linha-estilo-1 {
     border-bottom: 10px solid #4fb848;
-    width: 68%;
+    position: relative;
+    width: 55%;
 }
 
 .linha-estilo-3 {
     border-bottom: 10px solid #4fb848;
-    width: 26%;
+    position: relative;
+    width: 28%;
 }
 
 .linha-estilo-4 {
     border-bottom: 10px solid #0089c0;
     margin: calc(1rem / 2) 0px;
+    position: relative;
     width: 42%;
 }
 
 .linha-estilo-5 {
     border-bottom: 10px solid #4fb848;
     margin: calc(1rem / 2) 0px;
+    position: relative;
     width: 19%;
 }
 
@@ -163,10 +168,26 @@ input[type="checkbox"] {
 .btn-outline-info {
     background: white !important;
     border-radius: 50% !important;
-    
 }
-/* teste passado */
-.modal-wi-teste{
+
+
+
+.container-popUp {
     width: 80% !important;
     margin: auto !important;
 }
+
+.cor-botao-popUp{
+    background: #0089c0 !important;
+}
+.botao-popUp:hover {
+    background: rgb(59, 58, 58) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.linha-estilo-popUp{
+    border-bottom: 10px solid #4fb848;
+    width: 22%;
+}
+
