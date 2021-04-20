@@ -7,7 +7,7 @@
         <div class="card mb-4">
             <div class="card-body text-center">
                 <p class="card-title">COMPROVANTE DE RESIDÊNCIA</p>
-                <input type="file" class="btn btn-success" value="SELECIONE O ARQUIVO"></input>
+                <input type="file" class="btn btn-success" onchange="" value="SELECIONE O ARQUIVO"></input>
             </div>
         </div>
     </div>
@@ -26,11 +26,15 @@
         radioGrupoPrioritario[i].addEventListener('click', function(){
             for(var i = 0 in radioGrupoPrioritario){
                 if(radioGrupoPrioritario[i].checked)
+                    $(`#modal${i}`).modal('show')
+                    radioGrupoPrioritario[i].classList.add('.modal-open')
                     containerDocumento.innerHTML = abaUpload
                }    
         
         })
     }
-    
-  
    
+   
+function mudancaInput(){
+    
+}
