@@ -40,19 +40,23 @@
             </P>
             <div class="row">
                 <div class="col">
-                    <label for="2" class="form-label tamanho-fonte-login font-weight-bold">CPF (APENAS NÚMEROS)*</label>
-                    <input type="number"
-                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" id="2">
-                    <button id="botao-link" type="button" class="btn btn-link mb-4">Clique aqui para entrar com o Nº do
+                    <label for="botao-cpf-login" class="form-label tamanho-fonte-login font-weight-bold" data-label-cpf-login>CPF (APENAS NÚMEROS)*</label>
+                    <input type="text"
+                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" id="botao-cpf-login">
+                    <!-- <input type="text"
+                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" style="display: none;" id="botao-cpf-login1" data-mask="000 0000 0000 0000">
+                     -->
+                    <button id="botao-link" type="button" class="btn btn-link mb-4" onclick="entrarComNSus()"data-label-botaoAlternado-login>Clique aqui para entrar com o Nº do
                         Cartão SUS</button>
+                   
                 </div>
             </div>
 
             <div class="row">
                 <div class="col">
-                    <label for="2" class="form-label tamanho-fonte-login font-weight-bold">SENHA*</label>
-                    <input type="text"
-                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" id="2">
+                    <label for="botao-senha-login" class="form-label tamanho-fonte-login font-weight-bold" data-label-senha-login>SENHA*</label>
+                    <input type="password"
+                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" id="botao-senha-login">
 
                     <div class="col ">
                         <a class="text-dark tamanho-fonte-link font-weight-bold" href="">Esqueci minha senha</a>
@@ -90,6 +94,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script src="js/jquery.mask.js"></script>
+        <script src="js/login.js"></script>
 </body>
 
 </html>

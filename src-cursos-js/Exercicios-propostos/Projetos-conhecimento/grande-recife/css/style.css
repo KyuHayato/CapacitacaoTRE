@@ -191,3 +191,15 @@ input[type="checkbox"] {
     width: 22%;
 }
 
+::-webkit-input-placeholder {
+    color: white !important;
+ }
+ input{
+     color: white !important;
+ }
+#botao-cpf-login,#botao-senha-login{
+    color: black !important;
+}
+.teste{
+    display: none !important;
+}
