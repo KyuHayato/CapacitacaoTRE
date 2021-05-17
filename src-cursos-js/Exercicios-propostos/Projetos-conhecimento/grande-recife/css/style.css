@@ -200,6 +200,10 @@ input[type="checkbox"] {
 #botao-cpf-login,#botao-senha-login{
     color: black !important;
 }
-.teste{
+
+.esconde{
     display: none !important;
+}
+.aparece{
+    display: block !important;
 }
