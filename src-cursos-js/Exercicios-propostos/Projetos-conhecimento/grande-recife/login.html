@@ -39,32 +39,34 @@
                 Digite seus dados para continuar
             </P>
             <div class="row">
-                <div class="col">
+                <div class="col" id="teste">
                     <label for="botao-cpf-login" class="form-label tamanho-fonte-login font-weight-bold" data-label-cpf-login>CPF (APENAS NÚMEROS)*</label>
                     <input type="text"
-                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" id="botao-cpf-login">
-                    <!-- <input type="text"
-                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" style="display: none;" id="botao-cpf-login1" data-mask="000 0000 0000 0000">
-                     -->
-                    <button id="botao-link" type="button" class="btn btn-link mb-4" onclick="entrarComNSus()"data-label-botaoAlternado-login>Clique aqui para entrar com o Nº do
-                        Cartão SUS</button>
-                   
-                </div>
+                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" id="botao-cpf-login" data-input-cpf-cns-login>
+
+                        <!-- <input type="text"
+                            class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" style="display: none;" id="botao-cpf-login1" data-mask="000 0000 0000 0000">
+                        -->
+                        <button id="botao-link" type="button" class="btn btn-link" onclick="entrarComNSus()"data-label-botaoAlternado-login>Clique aqui para entrar com o Nº do
+                            Cartão SUS</button>
+                            <div class="mb-4" data-mensagem-erro></div>
+                            
+                    </div>
             </div>
 
             <div class="row">
                 <div class="col">
                     <label for="botao-senha-login" class="form-label tamanho-fonte-login font-weight-bold" data-label-senha-login>SENHA*</label>
                     <input type="password"
-                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" id="botao-senha-login">
-
+                        class="form-control border-top-0 border-right-0 border-left-0 border-bottom-login" id="botao-senha-login" data-input-password-login>
+                        <div data-mensagem-erro-senha></div>
                     <div class="col ">
                         <a class="text-dark tamanho-fonte-link font-weight-bold" href="esqueciSenha.html">Esqueci minha senha</a>
                     </div>
 
                     <div class="row justify-content-end">
                         <div class="col-5">
-                            <button type="button" class="btn btn-primary botao-entrar">ENTRAR</button>
+                            <button type="button" class="btn btn-primary botao-entrar" onclick="validarLogin()">ENTRAR</button>
                         </div>
                     </div>
                 </div>
@@ -96,6 +98,7 @@
         crossorigin="anonymous"></script>
         <script src="js/jquery.mask.js"></script>
         <script src="js/login.js"></script>
+        <script src="js/validacoes.js"></script>
 </body>
 
 </html>

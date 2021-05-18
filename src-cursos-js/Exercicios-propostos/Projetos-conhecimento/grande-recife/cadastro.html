@@ -1122,6 +1122,7 @@
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2" data-mask="00/00/0000" placeholder="DD/MM/YYYY">
                             </div>
                         </div>
+                        <span class="text-danger h6" style="display: none;" id="teste"> não pode ficar em branco</span>
 
                         <div class="row">
                             <div class="col">
@@ -1151,6 +1152,7 @@
                                         <option value="3" class="text-dark">Outros</option>
                                     </select>
                                 </div>
+                                
                             </div>
                         </div>
 
@@ -1229,7 +1231,7 @@
 
                         <div class="row justify-content-center">
                             <div class="col-4">
-                                <button type="button" class="btn btn-light botao-salvar">SALVAR</button>
+                                <button type="button" class="btn btn-light botao-salvar" onclick="validacaoTeste()">SALVAR</button>
                             </div>
                         </div>
                     </div>
@@ -1260,6 +1262,7 @@
         crossorigin="anonymous"></script>
     <script src="js/documentos.js"></script>
     <script src="js/jquery.mask.js"></script>
+    <script src="js/validacoes.js"></script>
 </body>
 
 </html>
