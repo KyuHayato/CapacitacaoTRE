@@ -1076,24 +1076,43 @@
                         <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
                             id="input-nome" placeholder=" ">
 
+                        <span id="mensagemErro-nome" class="text-danger h6" style="display: none;"> não pode ficar em
+                            branco</span>
+
+
                         <div class="row mt-3">
                             <div class="col-6">
                                 <label for="1" class="form-label">CPF</label>
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
-                                    id="1" data-mask="000.000.000-00" placeholder="___.___.___-__">
+                                    id="input-cpf" data-mask="000.000.000-00" placeholder="___.___.___-__">
+
+                                <span id="mensagemErro-cpf" class="text-danger h6" style="display: none;">não pode
+                                    ficar em branco</span>
+                                <span id="mensagemErro-cpf-Nvalido" class="text-danger h6" style="display: none;"> CPF
+                                    não é válido</span>
                             </div>
 
                             <div class="col-6">
                                 <label for="2" class="form-label">CARTÃO DO SUS</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2" data-mask="000 0000 0000 0000" placeholder="___ ____ ____ ____">
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2"
+                                    data-mask="000 0000 0000 0000" placeholder="___ ____ ____ ____">
+
+                                <span id="mensagemErro-CNS-branco" class="text-danger h6" style="display: none;">não
+                                    pode ficar em branco</span>
+                                <span id="mensagemErro-CNS-Nvalido" class="text-danger h6" style="display: none;"> CNS
+                                    não é válido</span>
+
                             </div>
                         </div>
 
                         <label for="2" class="form-label">NOME COMPLETO DA MÃE*</label>
                         <input type="text"
                             class="form-control border-top-0 border-right-0 border-left-0 border-bottom mb-3" id="2">
+
+                        <span id="mensagemErro-nome-mae" class="text-danger h6" style="display: none;"> não pode ficar
+                            em branco</span>
 
                         <label for="inputGroupSelect01" class="form-label">TEM ALGUMA NECESSIDADE ESPECIAL QUE
                             IMPOSSIBILITA AO CENTRO DE
@@ -1114,15 +1133,26 @@
                             <div class="col">
                                 <label for="2" class="form-label">TELEFONE*</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2" data-mask="(00) 0 0000-0000" placeholder="(__)_ ____-____">
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2"
+                                    data-mask="(00) 0 0000-0000" placeholder="(__)_ ____-____"
+                                    onchange="ValidaTelefone(this)">
+
+                                <span id="mensagemErro-telefone" class="text-danger h6" style="display: none;"> não pode
+                                    ficar em branco</span>
+
                             </div>
                             <div class="col">
                                 <label for="2" class="form-label">DATA DE NASCIMENTO*</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2" data-mask="00/00/0000" placeholder="DD/MM/YYYY">
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2"
+                                    data-mask="00/00/0000" placeholder="DD/MM/YYYY">
+
+                                <span id="mensagemErro-dataNasc" class="text-danger h6" style="display: none;"> não pode
+                                    ficar em branco</span>
+
                             </div>
                         </div>
-                        <span class="text-danger h6" style="display: none;" id="teste"> não pode ficar em branco</span>
+
 
                         <div class="row">
                             <div class="col">
@@ -1138,6 +1168,10 @@
                                         <option value="4" class="text-dark">Parda</option>
                                         <option value="5" class="text-dark">Indigena</option>
                                     </select>
+
+                                    <span id="mensagemErro-raca" class="text-danger h6" style="display: none;"> não pode
+                                        ficar em branco</span>
+
                                 </div>
                             </div>
                             <div class="col">
@@ -1151,8 +1185,12 @@
                                         <option value="2" class="text-dark">Feminino</option>
                                         <option value="3" class="text-dark">Outros</option>
                                     </select>
+
+                                    <span id="mensagemErro-sexo" class="text-danger h6" style="display: none;"> não pode
+                                        ficar em branco</span>
+
                                 </div>
-                                
+
                             </div>
                         </div>
 
@@ -1160,12 +1198,21 @@
                             <div class="col">
                                 <label for="2" class="form-label">CEP*</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom " id="2" data-mask="00000-000" placeholder="_____-___">
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom " id="2"
+                                    data-mask="00000-000" placeholder="_____-___" onchange="ValidaCep(this)">
+
+                                <span id="mensagemErro-cep" class="text-danger h6" style="display: none;"> não pode
+                                    ficar em branco</span>
+
                             </div>
                             <div class="col">
                                 <label for="2" class="form-label">RUA*</label>
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+
+                                <span id="mensagemErro-rua" class="text-danger h6" style="display: none;"> não pode
+                                    ficar em branco</span>
+
                             </div>
                         </div>
 
@@ -1174,6 +1221,10 @@
                                 <label for="2" class="form-label">NÚMERO*</label>
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+
+                                <span id="mensagemErro-numero" class="text-danger h6" style="display: none;"> não pode
+                                    ficar em branco</span>
+
                             </div>
                             <div class="col">
                                 <label for="2" class="form-label">COMPLEMENTO*</label>
@@ -1184,12 +1235,19 @@
                                 <label for="2" class="form-label">BAIRRO*</label>
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+
+                                <span id="mensagemErro-bairro" class="text-danger h6" style="display: none;"> não pode
+                                    ficar em branco</span>
+
                             </div>
                         </div>
 
                         <label for="2" class="form-label">CIDADE*</label>
                         <input type="email" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
                             id="2">
+
+                        <span id="mensagemErro-cidade" class="text-danger h6" style="display: none;"> não pode ficar em
+                            branco</span>
 
                         <div class="form-check mt-5 mb-5">
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -1204,12 +1262,21 @@
                                 <input type="email"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
                                     id="email">
+
+                                <span id="mensagemErro-email" class="text-danger h6" style="display: none;"> não pode
+                                    ficar em branco</span>
+
                             </div>
                             <div class="col">
                                 <label for="conf-email" class="form-label">CONFIRMAÇÃO DO EMAIL</label>
                                 <input type="email"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
                                     id="conf-email">
+
+                                <span id="mensagemErro-conf-email" class="text-danger h6" style="display: none;"> não
+                                    pode
+                                    ficar em branco</span>
+
                             </div>
                         </div>
 
@@ -1219,19 +1286,30 @@
                                 <input type="password"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
                                     id="senha">
+                                <div id="mensagemErro-senha">
+                                    <span id="mensagemErro-senha" class="text-danger h6" style="display: none;"> não
+                                        pode
+                                        ficar em branco</span>
+                                </div>
                             </div>
                             <div class="col">
                                 <label for="conf-senha" class="form-label">CONFIRMAÇÃO DA SENHA*</label>
                                 <input type="password"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom mb-5"
                                     id="conf-senha">
+                                <div id="mensagemErro-conf-senha">
+                                    <span id="mensagemErro-conf-senha" class="text-danger h6" style="display: none;">
+                                        não pode
+                                        ficar em branco</span>
+                                </div>
                             </div>
                         </div>
 
 
                         <div class="row justify-content-center">
                             <div class="col-4">
-                                <button type="button" class="btn btn-light botao-salvar" onclick="validacaoTeste()">SALVAR</button>
+                                <button type="button" class="btn btn-light botao-salvar"
+                                    onclick="validacaoTeste()">SALVAR</button>
                             </div>
                         </div>
                     </div>
@@ -1260,6 +1338,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+   
+
+
+
     <script src="js/documentos.js"></script>
     <script src="js/jquery.mask.js"></script>
     <script src="js/validacoes.js"></script>

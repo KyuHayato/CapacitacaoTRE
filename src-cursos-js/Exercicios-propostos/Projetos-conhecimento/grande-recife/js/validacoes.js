@@ -5,15 +5,15 @@ function validarLogin() {
     let inputSenha = document.querySelector("[data-input-password-login]")
     let mensagemErro = `<span class="text-danger h6 mb-4">Login ou senha inválida</span>`
     let mensagemErro2 = `<span class="text-danger h6">Login ou senha inválida</span>`
-    
+
     if (inputCpfCns.value == "" && inputCpfCns.value != "12345") {
-        divCampo1.innerHTML = mensagemErro  
-    } else{
+        divCampo1.innerHTML = mensagemErro
+    } else {
         return alert("logando")
     }
-    if(inputSenha.value == "" && inputSenha.value != "123" ){
+    if (inputSenha.value == "" && inputSenha.value != "123") {
         divCampo2.innerHTML = mensagemErro2
-    }else{
+    } else {
         return alert("logando")
     }
 }
@@ -32,14 +32,55 @@ function validarEsqueciSenha() {
     return alert("email enviado")
 }
 
-/* function validacaoTeste(){
-    if(document.querySelector("#teste").style.display == "none"){
-        document.querySelector("#teste").style.display = "block"
-        alert("entrou")
+/* function validacaoTeste() {
+    
+
+    if (document.querySelector("#input-nome").value == "") {
+        document.querySelector("#mensagemErro-nome").style.display = "block"
+        document.querySelector("#input-nome").focus()
+        
     } else{
-        document.querySelector("#teste").style.display = "none"
-        alert("else")
+        document.querySelector("#mensagemErro-nome").style.display = "none"
+    }
+    if (document.querySelector("#input-cpf").value == "") {
+        document.querySelector("#mensagemErro-cpf").style.display = "none"
+        //document.querySelector("#input-cpf").focus()
+       
+    } else if(document.querySelector("#input-cpf").value != '123.456.789-12'){
+        document.querySelector("#mensagemErro-cpf").style.display = "block"
+    }
+} */
+
+function ValidaCep(cep) {
+    exp = /\d{2}\.\d{3}\-\d{3}/
+    if (!exp.test(cep.value)) {
+        document.querySelector("#mensagemErro-cep").style.display = "block"
+            cep.focus();
+    }else{
+        document.querySelector("#mensagemErro-cep").style.display = "none"
     }
 }
- */
+
+function ValidaTelefone(tel) {
+    exp = /\(\d{2}\)\ \d{1}\ \d{4}\-\d{4}/
+    if (!exp.test(tel.value)) {
+        document.querySelector("#mensagemErro-telefone").style.display = "block"
+            tel.focus();
+    } else{
+        document.querySelector("#mensagemErro-telefone").style.display = "none"
+    }
+}
+
+function ValidaEmail(email) {
+    exp = /^([0-9a-zA-Z]+[-._+&amp;])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$/
+    erroMsg = 'e-Mail Inválido!';
+    if (email.value == '')
+            return false;
+    if (!exp.test(email.value)) {
+            dalert.alert(erroMsg);
+            //email.value='';
+            email.focus();
+            return false;
+    }
+}
 
