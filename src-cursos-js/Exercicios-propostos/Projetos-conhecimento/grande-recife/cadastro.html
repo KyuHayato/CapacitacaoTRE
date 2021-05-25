@@ -1085,7 +1085,7 @@
                                 <label for="1" class="form-label">CPF</label>
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
-                                    id="input-cpf" data-mask="000.000.000-00" placeholder="___.___.___-__">
+                                    id="input-cpf" data-mask="000.000.000-00" placeholder="___.___.___-__" onchange="validaCPF(this)">
 
                                 <span id="mensagemErro-cpf" class="text-danger h6" style="display: none;">não pode
                                     ficar em branco</span>
@@ -1097,7 +1097,7 @@
                                 <label for="2" class="form-label">CARTÃO DO SUS</label>
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2"
-                                    data-mask="000 0000 0000 0000" placeholder="___ ____ ____ ____">
+                                    data-mask="000 0000 0000 0000" placeholder="___ ____ ____ ____" onchange="validacaoCartaoSUS(this)">
 
                                 <span id="mensagemErro-CNS-branco" class="text-danger h6" style="display: none;">não
                                     pode ficar em branco</span>
@@ -1139,13 +1139,14 @@
 
                                 <span id="mensagemErro-telefone" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
+                                <span id="mensagemErro-telefone-incompleto" class="text-danger h6" style="display: none;">Telefone incompleto</span>
 
                             </div>
                             <div class="col">
                                 <label for="2" class="form-label">DATA DE NASCIMENTO*</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2"
-                                    data-mask="00/00/0000" placeholder="DD/MM/YYYY">
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="data-Nasc"
+                                    data-mask="00/00/0000" placeholder="DD/MM/YYYY" onchange="validaDataNasc()">
 
                                 <span id="mensagemErro-dataNasc" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
@@ -1219,8 +1220,8 @@
                         <div class="row mt-3 mb-3">
                             <div class="col">
                                 <label for="2" class="form-label">NÚMERO*</label>
-                                <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                                <input type="number"
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="num" onchange="validaNum(this)">
 
                                 <span id="mensagemErro-numero" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
@@ -1244,7 +1245,7 @@
 
                         <label for="2" class="form-label">CIDADE*</label>
                         <input type="email" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
-                            id="2">
+                            id="2" onchange="ValidaEmail(this)">
 
                         <span id="mensagemErro-cidade" class="text-danger h6" style="display: none;"> não pode ficar em
                             branco</span>
@@ -1261,8 +1262,9 @@
                                 <label for="email" class="form-label">EMAIL</label>
                                 <input type="email"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
-                                    id="email">
+                                    id="email" onchange="ValidaEmail(this)">
 
+                                <span id="mensagemErro-email-invalido" class="text-danger h6" style="display: none;">Email incompleto ou invalido</span>
                                 <span id="mensagemErro-email" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
 
