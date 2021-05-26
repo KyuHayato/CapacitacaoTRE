@@ -1073,7 +1073,7 @@
                     <div class="mb-4">
 
                         <label for="input-nome" class="form-label">NOME*</label>
-                        <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
+                        <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom" 
                             id="input-nome" placeholder=" ">
 
                         <span id="mensagemErro-nome" class="text-danger h6" style="display: none;"> não pode ficar em
@@ -1096,7 +1096,7 @@
                             <div class="col-6">
                                 <label for="2" class="form-label">CARTÃO DO SUS</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2"
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="sus"
                                     data-mask="000 0000 0000 0000" placeholder="___ ____ ____ ____" onchange="validacaoCartaoSUS(this)">
 
                                 <span id="mensagemErro-CNS-branco" class="text-danger h6" style="display: none;">não
@@ -1109,7 +1109,7 @@
 
                         <label for="2" class="form-label">NOME COMPLETO DA MÃE*</label>
                         <input type="text"
-                            class="form-control border-top-0 border-right-0 border-left-0 border-bottom mb-3" id="2">
+                            class="form-control border-top-0 border-right-0 border-left-0 border-bottom mb-3" id="nome-mae">
 
                         <span id="mensagemErro-nome-mae" class="text-danger h6" style="display: none;"> não pode ficar
                             em branco</span>
@@ -1133,7 +1133,7 @@
                             <div class="col">
                                 <label for="2" class="form-label">TELEFONE*</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2"
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="numtelefone"
                                     data-mask="(00) 0 0000-0000" placeholder="(__)_ ____-____"
                                     onchange="ValidaTelefone(this)">
 
@@ -1146,10 +1146,11 @@
                                 <label for="2" class="form-label">DATA DE NASCIMENTO*</label>
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="data-Nasc"
-                                    data-mask="00/00/0000" placeholder="DD/MM/YYYY" onchange="validaDataNasc()">
+                                    data-mask="00/00/0000" placeholder="DD/MM/YYYY" onchange="validaDataNasc(this)">
 
                                 <span id="mensagemErro-dataNasc" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
+                                <span id="mensagemErro-dataNasc-invalido" class="text-danger h6" style="display: none;">data de nascimento invalida</span>
 
                             </div>
                         </div>
@@ -1157,11 +1158,11 @@
 
                         <div class="row">
                             <div class="col">
-                                <label for="inputGroupSelect01" class="form-label">RAÇA/COR*</label>
+                                <label for="inputGroupSelect02" class="form-label">RAÇA/COR*</label>
                                 <div class="input-group mb-3">
                                     <select
                                         class=" form-control custom-select text-light border-top-0 border-right-0 border-left-0 border-bottom"
-                                        id="inputGroupSelect01">
+                                        id="inputGroupSelect02">
                                         <option selected class="text-dark"></option>
                                         <option value="1" class="text-dark">Amarela</option>
                                         <option value="2" class="text-dark">Branca</option>
@@ -1176,21 +1177,19 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <label for="2" class="form-label">SEXO*</label>
+                                <label for="inputGroupSelect03" class="form-label">SEXO*</label>
                                 <div class="input-group mb-3">
                                     <select
                                         class=" form-control custom-select text-light border-top-0 border-right-0 border-left-0 border-bottom"
-                                        id="inputGroupSelect01">
+                                        id="inputGroupSelect03">
                                         <option selected class="text-dark"></option>
                                         <option value="1" class="text-dark">Masculino</option>
                                         <option value="2" class="text-dark">Feminino</option>
                                         <option value="3" class="text-dark">Outros</option>
-                                    </select>
-
-                                    <span id="mensagemErro-sexo" class="text-danger h6" style="display: none;"> não pode
-                                        ficar em branco</span>
-
+                                    </select>     
                                 </div>
+                                <span id="mensagemErro-sexo" class="text-danger h6" style="display: none;"> não pode
+                                    ficar em branco</span>
 
                             </div>
                         </div>
@@ -1244,8 +1243,8 @@
                         </div>
 
                         <label for="2" class="form-label">CIDADE*</label>
-                        <input type="email" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
-                            id="2" onchange="ValidaEmail(this)">
+                        <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
+                            id="2" onchange="ValidaCidade(this)">
 
                         <span id="mensagemErro-cidade" class="text-danger h6" style="display: none;"> não pode ficar em
                             branco</span>
