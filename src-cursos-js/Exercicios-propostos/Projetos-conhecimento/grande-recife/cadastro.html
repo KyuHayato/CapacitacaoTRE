@@ -1020,9 +1020,10 @@
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                                 value="option2">
-                            <label class="form-check-label mb-2" for="inlineRadio2">Público em Geral</label><button
+                            <label class="form-check-label mb-4" for="inlineRadio2">Público em Geral</label><button
                                 type="button" class="btn btn-outline-info ml-2" data-toggle="modal"
                                 data-target="#modal24">❔</button>
+                                
 
                             <div class="modal fade text-dark" id="modal24" tabindex="-1" role="dialog"
                                 aria-labelledby="modal1" aria-hidden="true">
@@ -1049,8 +1050,9 @@
                                     </div>
                                 </div>
                             </div>
-
+                                
                         </div>
+                        <span class="text-danger h4" style="display: none;" id="mensagemGrupo">⚠️Grupo deve ser selecionado!⚠️</span>
                     </li>
                 </ul>
             </div>
@@ -1162,20 +1164,19 @@
                                 <div class="input-group mb-3">
                                     <select
                                         class=" form-control custom-select text-light border-top-0 border-right-0 border-left-0 border-bottom"
-                                        id="inputGroupSelect02">
+                                        id="inputGroupSelect02" onchange="validaCor(this)">
                                         <option selected class="text-dark"></option>
                                         <option value="1" class="text-dark">Amarela</option>
                                         <option value="2" class="text-dark">Branca</option>
                                         <option value="3" class="text-dark">Preta</option>
                                         <option value="4" class="text-dark">Parda</option>
                                         <option value="5" class="text-dark">Indigena</option>
-                                    </select>
-
-                                    <span id="mensagemErro-raca" class="text-danger h6" style="display: none;"> não pode
-                                        ficar em branco</span>
-
+                                    </select>    
                                 </div>
+                                <span id="mensagemErro-raca" class="text-danger h6" style="display: none;"> não pode
+                                    ficar em branco</span>
                             </div>
+
                             <div class="col">
                                 <label for="inputGroupSelect03" class="form-label">SEXO*</label>
                                 <div class="input-group mb-3">
@@ -1198,7 +1199,7 @@
                             <div class="col">
                                 <label for="2" class="form-label">CEP*</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom " id="2"
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom " id="cep"
                                     data-mask="00000-000" placeholder="_____-___" onchange="ValidaCep(this)">
 
                                 <span id="mensagemErro-cep" class="text-danger h6" style="display: none;"> não pode
@@ -1208,7 +1209,7 @@
                             <div class="col">
                                 <label for="2" class="form-label">RUA*</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="rua">
 
                                 <span id="mensagemErro-rua" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
@@ -1224,6 +1225,7 @@
 
                                 <span id="mensagemErro-numero" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
+                                <span id="mensagemErro-numero-zero" class="text-danger h6" style="display: none;"> Não pode ser zero</span>
 
                             </div>
                             <div class="col">
@@ -1234,7 +1236,7 @@
                             <div class="col">
                                 <label for="2" class="form-label">BAIRRO*</label>
                                 <input type="text"
-                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                                    class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="bairro">
 
                                 <span id="mensagemErro-bairro" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
@@ -1244,7 +1246,7 @@
 
                         <label for="2" class="form-label">CIDADE*</label>
                         <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
-                            id="2" onchange="ValidaCidade(this)">
+                            id="cidade" onchange="ValidaCidade(this)">
 
                         <span id="mensagemErro-cidade" class="text-danger h6" style="display: none;"> não pode ficar em
                             branco</span>
@@ -1274,9 +1276,10 @@
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
                                     id="conf-email">
 
-                                <span id="mensagemErro-conf-email" class="text-danger h6" style="display: none;"> não
+                                <span id="mensagemErro-conf-branco" class="text-danger h6" style="display: none;"> não
                                     pode
                                     ficar em branco</span>
+                                <span id="mensagemErro-conf-Nigual" class="text-danger h6" style="display: none;"> Os dois emails n coincidem!</span>
 
                             </div>
                         </div>
