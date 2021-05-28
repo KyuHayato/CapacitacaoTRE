@@ -33,17 +33,26 @@ function validarEsqueciSenha() {
 }
 
 function validacaoTeste() {
-/* console.log(document.getElementsByName("inlineRadioOptions"))
-    if (document.getElementsByName("inlineRadioOptions").value == "") {
-        document.querySelector("#mensagemGrupo").style.block = "block"
-    } else {
-        alert("aqui")
-        document.querySelector("#mensagemGrupo").style.block = "none"
+    
+    /* for (var i = 0 in document.querySelectorAll('[name="inlineRadioOptions"]').length){
+
+        if (document.querySelectorAll('[name="inlineRadioOptions"]')[i].checked){
+
+        } else {
+            document.querySelector("#mensagemGrupo").style.block = "block"
+        }
     } */
+
+      /*   if (!document.querySelectorAll('[name="inlineRadioOptions"]').checked) {
+            document.querySelector("#mensagemGrupo").style.block = "block"
+        } else {
+            alert("aqui")
+            document.querySelector("#mensagemGrupo").style.block = "none"
+        } */
 
     if (document.querySelector("#input-nome").value == "") {
         document.querySelector("#mensagemErro-nome").style.display = "block"
-       
+
     } else {
         document.querySelector("#mensagemErro-nome").style.display = "none"
     }
@@ -106,25 +115,25 @@ function validacaoTeste() {
         document.querySelector("#mensagemErro-raca").style.display = "none"
     }
 
-    if(document.querySelector("#num").value == ""){
+    if (document.querySelector("#num").value == "") {
         document.querySelector("#mensagemErro-numero").style.display = "block"
     } else {
         document.querySelector("#mensagemErro-numero").style.display = "none"
     }
-    
-    if(document.querySelector("#bairro").value == ""){
+
+    if (document.querySelector("#bairro").value == "") {
         document.querySelector("#mensagemErro-bairro").style.display = "block"
-    } else{
+    } else {
         document.querySelector("#mensagemErro-bairro").style.display = "block"
 
     }
-    if(document.querySelector("#rua").value == ""){
+    if (document.querySelector("#rua").value == "") {
         document.querySelector("#mensagemErro-rua").style.display = "block"
     } else {
         document.querySelector("#mensagemErro-rua").style.display = "none"
     }
-    
-    if(document.querySelector("#cidade").value == ""){
+
+    if (document.querySelector("#cidade").value == "") {
         document.querySelector("#mensagemErro-cidade").style.display = "block"
     } else {
         document.querySelector("#mensagemErro-cidade").style.display = "block"
@@ -135,9 +144,25 @@ function validacaoTeste() {
     } else {
         document.querySelector("#mensagemErro-email").style.display = "none"
     }
+
+    if (document.querySelector("#conf-email").value == '') {
+        document.querySelector("#mensagemErro-conf-branco").style.display = "block"
+    } else {
+        document.querySelector("#mensagemErro-conf-branco").style.display = "block"
+    }
+    if (document.querySelector("#senha").value == "") {
+        document.querySelector("#mensagemErro-senha-branco").style.display = "block"
+    } else {
+        document.querySelector("#mensagemErro-senha-branco").style.display = "none"
+    }
+
+    if (document.querySelector("#conf-senha").value == '') {
+        document.querySelector("#mensagemErro-conf-branco-senha").style.display = "block"
+    } else {
+        document.querySelector("#mensagemErro-conf-branco-senha").style.display = "none"
+    }
+
 }
-
-
 function validaCPF(cpf) {
     exp = /\d{3}\.\d{3}\.\d{3}\-\d{2}/
     if (cpf.value == "") {
@@ -252,12 +277,12 @@ function validacaoCartaoSUS(sus) {
 function validaNum(num) {
     if (num.value == "") {
         document.querySelector("#mensagemErro-numero").style.display = "block"
-    } else{
+    } else {
         document.querySelector("#mensagemErro-numero").style.display = "none"
     }
-    if (num.value == 0){
+    if (num.value == 0) {
         document.querySelector("#mensagemErro-numero-zero").style.display = "block"
-    } else{
+    } else {
         document.querySelector("#mensagemErro-numero-zero").style.display = "none"
     }
 }
@@ -268,23 +293,24 @@ function validaCor(cor) {
         document.querySelector("#mensagemErro-raca").style.display = "none"
     }
 }
-function bairro(bairro){
-    if(bairro.value == ""){
-        document.querySelector("#mensagemErro-bairro").style.display = "block"
-    } else{
-        document.querySelector("#mensagemErro-bairro").style.display = "block"
-
-    }
-}
-function validaRua(rua){
-    if(rua.value == ""){
+function validaRua(rua) {
+    if (rua.value == "") {
         document.querySelector("#mensagemErro-rua").style.display = "block"
     } else {
         document.querySelector("#mensagemErro-rua").style.display = "none"
     }
+
+function validaBairro(bairro) {
+    if (bairro.value == "") {
+        document.querySelector("#mensagemErro-bairro").style.display = "block"
+    } else {
+        document.querySelector("#mensagemErro-bairro").style.display = "block"
+
+    }
 }
-function validaCidade(cidade){
-    if(cidade.value == ""){
+}
+function validaCidade(cidade) {
+    if (cidade.value == "") {
         document.querySelector("#mensagemErro-cidade").style.display = "block"
     } else {
         document.querySelector("#mensagemErro-cidade").style.display = "block"
@@ -294,21 +320,53 @@ function validaCidade(cidade){
 function ValidaEmailConfirma(email) {
     let exp = /^([0-9a-zA-Z]+[-._+&amp;])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$/
     if (email.value == '') {
-        document.querySelector("#mensagemErro-email-branco").style.display = "block"
+        document.querySelector("#mensagemErro-conf-branco").style.display = "block"
         email.focus();
         return false;
     } else {
-        document.querySelector("#mensagemErro-email").style.display = "none"
+        document.querySelector("#mensagemErro-conf-branco").style.display = "none"
     }
     if (!exp.test(email.value)) {
 
-        document.querySelector("#mensagemErro-email-invalido").style.display = "block"
+        document.querySelector("#mensagemErro-email-invalido-conf").style.display = "block"
         email.focus();
         return false;
     } else {
-        document.querySelector("#mensagemErro-email-invalido").style.display = "none"
+        document.querySelector("#mensagemErro-email-invalido-conf").style.display = "none"
+    }
+    if (email.value != document, querySelector("#email").value) {
+        document.querySelector("#mensagemErro-conf-Nigual-conf").style.display = "block"
+    } else {
+        document.querySelector("#mensagemErro-conf-Nigual-conf").style.display = "none"
+
+    }
+}
+// Falta correção de bugs
+
+function validaSenha(senha) {
+    if (senha.value == "") {
+        document.querySelector("#mensagemErro-senha-branco").style.display = "block"
+    } else {
+        document.querySelector("#mensagemErro-senha-branco").style.display = "none"
+    }
+    if (senha.value != "teste") {
+        document.querySelector("#mensagemErro-senha-incorreta").style.display = "block"
+    } else {
+        document.querySelector("#mensagemErro-senha-incorreta").style.display = "none"
+
     }
 
 }
+function validaSenhaConf(senha) {
+    if (senha.value == "") {
+        document.querySelector("#mensagemErro-conf-branco").style.display = "block"
+    } else {
+        document.querySelector("#mensagemErro-conf-branco").style.display = "none"
+    }
+    if (senha.value != document.querySelector("#senha").value) {
+        document.querySelector("#mensagemErro-conf-senha").style.display = "block"
+    } else {
+        document.querySelector("#mensagemErro-conf-senha").style.display = "none"
+    }
 
-
+}
