@@ -1077,7 +1077,7 @@
 
                         <label for="input-nome" class="form-label">NOME*</label>
                         <input type="text" class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
-                            id="input-nome" placeholder=" ">
+                            id="input-nome" placeholder=" " onchange="validaNome(this)">
 
                         <span id="mensagemErro-nome" class="text-danger h6" style="display: none;"> não pode ficar em
                             branco</span>
@@ -1115,7 +1115,7 @@
                         <label for="2" class="form-label">NOME COMPLETO DA MÃE*</label>
                         <input type="text"
                             class="form-control border-top-0 border-right-0 border-left-0 border-bottom mb-3"
-                            id="nome-mae">
+                            id="nome-mae" onchange="validaNomeMae(this)">
 
                         <span id="mensagemErro-nome-mae" class="text-danger h6" style="display: none;"> não pode ficar
                             em branco</span>
@@ -1154,12 +1154,14 @@
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
                                     id="data-Nasc" data-mask="00/00/0000" placeholder="DD/MM/YYYY"
-                                    onchange="validaDataNasc(this)">
+                                    onchange="validaDataNasc()">
 
                                 <span id="mensagemErro-dataNasc" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
                                 <span id="mensagemErro-dataNasc-invalido" class="text-danger h6"
                                     style="display: none;">data de nascimento invalida</span>
+                                <span id="mensagemErro-dataNasc-Ninvalido" class="text-danger h6"
+                                    style="display: none;">data de nascimento invalida(numeros fora de escala)</span>
 
                             </div>
                         </div>
@@ -1189,7 +1191,7 @@
                                 <div class="input-group mb-3">
                                     <select
                                         class=" form-control custom-select text-light border-top-0 border-right-0 border-left-0 border-bottom"
-                                        id="inputGroupSelect03">
+                                        id="inputGroupSelect03" onchange="validaSexo(this)">
                                         <option selected class="text-dark"></option>
                                         <option value="1" class="text-dark">Masculino</option>
                                         <option value="2" class="text-dark">Feminino</option>
@@ -1211,6 +1213,7 @@
 
                                 <span id="mensagemErro-cep" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
+                                <span id="mensagemErro-cep-incInvalido" class="text-danger h6" style="display: none;"> Numero incompleto ou invalido</span>
 
                             </div>
                             <div class="col">
@@ -1242,6 +1245,7 @@
                                 <label for="2" class="form-label">COMPLEMENTO*</label>
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom" id="2">
+                                    
                             </div>
 
                             <div class="col">
@@ -1287,7 +1291,7 @@
                                 <label for="conf-email" class="form-label">CONFIRMAÇÃO DO EMAIL</label>
                                 <input type="email"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
-                                    id="conf-email" onchange="ValidaEmailConfirma(this)">
+                                    id="conf-email" onchange="validaEmailConfirma(this)">
 
                                 <span id="mensagemErro-conf-branco" class="text-danger h6" style="display: none;"> não
                                     pode
@@ -1334,7 +1338,7 @@
                         <div class="row justify-content-center">
                             <div class="col-4">
                                 <button type="button" class="btn btn-light botao-salvar mt-5"
-                                    onclick="validacaoTeste()">SALVAR</button>
+                                    onclick="validaCadastro()">SALVAR</button>
                             </div>
                         </div>
                     </div>
