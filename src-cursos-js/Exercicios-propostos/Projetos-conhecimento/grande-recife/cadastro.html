@@ -1154,14 +1154,12 @@
                                 <input type="text"
                                     class="form-control border-top-0 border-right-0 border-left-0 border-bottom"
                                     id="data-Nasc" data-mask="00/00/0000" placeholder="DD/MM/YYYY"
-                                    onchange="validaDataNasc()">
+                                    onchange="validaDataNasc()" onblur="validaDataNasc()">
 
                                 <span id="mensagemErro-dataNasc" class="text-danger h6" style="display: none;"> não pode
                                     ficar em branco</span>
-                                <span id="mensagemErro-dataNasc-invalido" class="text-danger h6"
-                                    style="display: none;">data de nascimento invalida</span>
                                 <span id="mensagemErro-dataNasc-Ninvalido" class="text-danger h6"
-                                    style="display: none;">data de nascimento invalida(numeros fora de escala)</span>
+                                    style="display: none;">data de nascimento invalida</span>
 
                             </div>
                         </div>

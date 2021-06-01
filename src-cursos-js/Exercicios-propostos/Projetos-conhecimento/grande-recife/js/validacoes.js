@@ -33,14 +33,14 @@ function validarEsqueciSenha() {
 }
 
 function validaCadastro() {
-    
-   
-    for(let i= 0;i <= document.querySelectorAll('[name="inlineRadioOptions"]').length - 1; i++){
 
-        if (!document.querySelectorAll('[name="inlineRadioOptions"]')[i].checked){
-            document.querySelector("#mensagemGrupo").style.display= "block"
+
+    for (let i = 0; i <= document.querySelectorAll('[name="inlineRadioOptions"]').length - 1; i++) {
+
+        if (!document.querySelectorAll('[name="inlineRadioOptions"]')[i].checked) {
+            document.querySelector("#mensagemGrupo").style.display = "block"
         } else {
-            document.querySelector("#mensagemGrupo").style.display= "none"
+            document.querySelector("#mensagemGrupo").style.display = "none"
         }
     }
 
@@ -155,14 +155,14 @@ function validaCadastro() {
     } else {
         document.querySelector("#mensagemErro-conf-branco-senha").style.display = "none"
     }
-
 }
+
 function validaCPF(cpf) {
     exp = /\d{3}\.\d{3}\.\d{3}\-\d{2}/
     if (cpf.value == "") {
         document.querySelector("#mensagemErro-cpf").style.display = "block"
         cpf.focus()
-        
+
     } else {
         document.querySelector("#mensagemErro-cpf").style.display = "none"
     }
@@ -175,7 +175,7 @@ function validaCPF(cpf) {
     if (cpf.value != '123.456.789-12') {
         document.querySelector("#mensagemErro-cpf-Nvalido").style.display = "block"
         cpf.focus()
-    } else{
+    } else {
         document.querySelector("#mensagemErro-cpf-Nvalido").style.display = "none"
     }
 }
@@ -197,8 +197,8 @@ function ValidaTelefone(tel) {
 //corrigir bug!
 function validaDataNasc() {
     exp = /\d{2}\/\d{2}\/\d{4}/
-    let data = document.querySelector("#data-Nasc").value 
-    data = data.replace(/\//g, "-") 
+    let data = document.querySelector("#data-Nasc").value
+    data = data.replace(/\//g, "-")
     let data_array = data.split("-")
 
     if (document.querySelector("#data-Nasc").value == "") {
@@ -209,33 +209,27 @@ function validaDataNasc() {
     }
     let hoje = new Date();
 
-    console.log(hoje.getFullYear())
-    console.log(data_array[2])
-    let validaIdade = data_array[2] - hoje.getFullYear()
-     
-   console.log(data_array[1])
-    console.log(validaIdade)
-    if (validaIdade > 120 && data_array[1] > 12) {
+    let validaIdade = hoje.getFullYear() - data_array[2]
+
+    if (validaIdade <= 0 || validaIdade > 120 || data_array[1] > 12 || data_array[0] > 31) {
         document.querySelector("#mensagemErro-dataNasc-Ninvalido").style.display = "block"
-        alert("caiu")
         document.querySelector("#data-Nasc").focus()
     } else {
-        alert("aqui")
         document.querySelector("#mensagemErro-dataNasc-Ninvalido").style.display = "none"
     }
     if (!exp.test(document.querySelector("#data-Nasc").value)) {
-        document.querySelector("#mensagemErro-dataNasc-invalido").style.display = "block"
+        document.querySelector("#mensagemErro-dataNasc-Ninvalido").style.display = "block"
         document.querySelector("#data-Nasc").focus()
     } else {
-        document.querySelector("#mensagemErro-dataNasc-invalido").style.display = "none"
+        document.querySelector("#mensagemErro-dataNasc-Ninvalido").style.display = "none"
     }
 }
 function ValidaCep(cep) {
     exp = /\d{5}\-\d{3}/
-    if(cep.value == ""){
+    if (cep.value == "") {
         document.querySelector("#mensagemErro-cep").style.display = "block"
         cep.focus();
-    } else{
+    } else {
         document.querySelector("#mensagemErro-cep").style.display = "none"
     }
 
@@ -385,7 +379,7 @@ function validaSenhaConf(senha) {
         document.querySelector("#mensagemErro-conf-senha").style.display = "none"
     }
 }
-function validaNome(nome){
+function validaNome(nome) {
     if (nome.value == "") {
         document.querySelector("#mensagemErro-nome").style.display = "block"
         nome.focus()
@@ -393,7 +387,7 @@ function validaNome(nome){
         document.querySelector("#mensagemErro-nome").style.display = "none"
     }
 }
-function validaNomeMae(nomeMae){
+function validaNomeMae(nomeMae) {
     if (nomeMae.value == "") {
         document.querySelector("#mensagemErro-nome-mae").style.display = "block"
         nomeMae.focus()
@@ -401,7 +395,7 @@ function validaNomeMae(nomeMae){
         document.querySelector("#mensagemErro-nome-mae").style.display = "none"
     }
 }
-function validaSexo(sexo){
+function validaSexo(sexo) {
     if (sexo.value == "") {
         document.querySelector("#mensagemErro-sexo").style.display = "block"
         sexo.focus()
